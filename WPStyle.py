@@ -3,12 +3,10 @@ import re, sublime, sublime_plugin
 class WpstyleCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
 		patterns = (
-			(re.compile(r'\(\s+'), '('),
-			(re.compile(r'\s+\)'), ')'),
-			(re.compile(r'\('), '( '),
-			(re.compile(r'\)'), ' )'), 
-			(re.compile(r'\(\s+\)'), '()'),
-			(re.compile(r'\(\s*(array|bool|boolean|string|integer|object|float|double)\s*\)'), r'(\1)'),
+			(re.compile(r'\((?=\S)', re.M), r'( '),
+			(re.compile(r'(?<=\S)\)', re.M), r' )'),
+			(re.compile(r'\(\s+\)', re.M), r'()'),
+			(re.compile(r'\(\s*(array|bool|boolean|string|integer|object|float|double)\s*\)', re.M), r'(\1)'),
 		)
 
 		regions = self.view.sel()

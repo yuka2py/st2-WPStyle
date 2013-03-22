@@ -1,5 +1,5 @@
 [
-    // {
-    //     "keys": ["super+e"], "command": "wpstyle"
-    // }
+    {
+        "keys": ["super+e"], "command": "wpstyle"
+    }
 ]

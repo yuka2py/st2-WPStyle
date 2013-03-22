@@ -1,3 +1,6 @@
 [
-	{ "caption": "WPStyle: Apply style to selection or all", "command": "wpstyle" }
+	{
+		"caption": "WPStyle: Apply style to selection or all",
+		"command": "wpstyle"
+	}
 ]
