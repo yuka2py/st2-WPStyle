@@ -1,4 +1,7 @@
-import re, sublime, sublime_plugin
+import re
+import sublime
+import sublime_plugin
+
 
 class WpstyleCommand(sublime_plugin.TextCommand):
 	def run(self, edit):
@@ -7,6 +10,7 @@ class WpstyleCommand(sublime_plugin.TextCommand):
 			(re.compile(r'(?<=\S)\)', re.M), r' )'),
 			(re.compile(r'\(\s+\)', re.M), r'()'),
 			(re.compile(r'\(\s*(array|bool|boolean|string|integer|object|float|double)\s*\)', re.M), r'(\1)'),
+			(re.compile(r'\(\s+$', re.M), r'('),
 		)
 
 		regions = self.view.sel()
