@@ -3,4 +3,14 @@
 		"caption": "WPStyle: Apply style to selection or all",
 		"command": "wpstyle"
 	}
+	,
+	{
+		"caption": "WPStyle: Find Hook Call in Files...",
+		"command": "wp_find_hook_call"
+	}
+	,
+	{
+		"caption": "WPStyle: Find Hook Registering in Files...",
+		"command": "wp_find_hook_registering"
+	}
 ]
