@@ -26,12 +26,12 @@ class WpstyleCommand(sublime_plugin.TextCommand):
 class WpFindHookCallCommand(sublime_plugin.WindowCommand):
 	def run(self):
 		open_find_in_files_with_text(self.window, 
-			"""(do_action|apply_filters)(_ref_array)?\([\ \"\']+""")
+			"""(do_action|apply_filters)(_ref_array)?\([ "']+""")
 
 class WpFindHookRegisteringCommand(sublime_plugin.WindowCommand):
 	def run(self):
 		open_find_in_files_with_text(self.window, 
-			"""(add_action|add_filter)\([\ \"\']+""")
+			"""(add_action|add_filter)\([ "']+""")
 
 def open_find_in_files_with_text(win, text):
 	win.run_command("show_panel", {
