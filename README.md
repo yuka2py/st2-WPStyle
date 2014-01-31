@@ -1,7 +1,8 @@
 st2-WPStyle
 ===========
 
-This plugin works to modify code to the WordPress style.
+This plugin works to modify code to the WordPress style,
+also find the hooks of registering/calling in files.
 
 ## Directory
 
@@ -14,12 +15,13 @@ This plugin works to modify code to the WordPress style.
                 ├── WPStyle.py
                 └── README.md
 
+
 ## How to use
 
 1. The clone in the package folder
 
         $ cd /path/to/Sublime Text 2/Packages
-        $ git clone https://github.com/yuka2py/WPStyle.git
+        $ git clone https://github.com/yuka2py/st2-WPStyle.git
 
 2. Execution from the Command Palette.
 
@@ -27,6 +29,13 @@ This plugin works to modify code to the WordPress style.
 
     Applied to the selection.
     If not selected regions, apply to whole of the current file.
+
+    OR
+    
+        WPStyle: Find Hook Call in Files...
+        WPStyle: Find Hook Registering in Files...
+
+    Run the "Find in Files ..." with a regexp to find a hook.
 
 
 ## Sample
